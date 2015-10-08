@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertSense.Lumberjack.LogViewer", "LogViewer\AlertSense.Lumberjack.LogViewer.csproj", "{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AlertSense.Lumberjack.Data", "Log\AlertSense.Lumberjack.Data.sqlproj", "{5FB38432-B6E8-4894-B4CC-B9D589180221}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{0602BB8D-5BE7-4824-8E09-E7B36F2397A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5493053F-E1FC-4EAF-8DF4-318FAC8358AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2} = {0602BB8D-5BE7-4824-8E09-E7B36F2397A5}
+		{5FB38432-B6E8-4894-B4CC-B9D589180221} = {5493053F-E1FC-4EAF-8DF4-318FAC8358AA}
+	EndGlobalSection
+EndGlobal

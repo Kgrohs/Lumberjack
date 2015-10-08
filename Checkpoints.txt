@@ -1,0 +1,62 @@
+Homework 2 - Project Checkpoints
+
+October 8th - Up and Running (Database Logs)
+Get a landing page up - basic MVC pattern 
+Model the log4net Log table entries. 
+slap the entries in a table. Use ORM. 
+Not much formatting at this point. 
+Find out how we’re going to host this thing, pay for it(?), host it. 
+Database(s) - TSQL instance(s) hosted somewhere
+Permissions - app can connect to the database(s)
+Generate some data with log4net
+User should bit able to hit the site and see top 50 logs at this point.
+Think about/Draft how the UI should look
+
+October 22nd - Filter and Sort (Database Logs - Multiple sources/tables) 
+(Story)Logs displayed should grab logs from multiple tables
+Table on different servers. 
+Add information as to where each log is coming from( instance/tablename?) and merge data on time stamp
+ Make sure that ticks are enabled for time, seconds probably won’t be precise enough.
+Add form to filter the logs presented. log4net logs have the 
+following fields that should be filterable: [Date],[Thread],[Level],[Logger],[Message],[Exception]
+Keep in mind what fields the Email logs or SQL logs information/fields will look like, don’t dig yourself a hole you can’t get out of. 
+Consider how to add Email logs/ SQL logs  to this information without breaking the way it’s working.. 
+Once filterable, Start to make the app look like the draft
+Unit tests for database
+Can I connect to DB?
+Does table have the required columns?
+Does table have extra columns?
+
+November 12th - Add additional Log Sources (Not Database)
+(Story)Add Endpoints
+Email logs
+How the heck to do this.
+Possibly Pull in email content into the Message body.. 
+Attempt to parse out the Main column values if exists in email body
+[Date],[Thread],[Level],[Logger],[Message],[Exception]
+SQL logs 
+How the heck to do this?
+Determine if they belong in the same table, or how to organize all of this data. 
+Display all information on the page
+make it look nice. 
+Add ability to select log entry/entries and maybe view their information in more detail.
+
+December 03rd - Are you done yet?
+Project can pull data from, and display data for: 
+Database 
+Email logs 
+TSQL logs. 
+User can easily decipher:
+Where log entry came from
+DatabaseLogs vs EmailLogs vs TSQL transaction Logs
+Filter out the ones that they care about. 
+Product looks very polished - Follows the draft 
+Server side paging 
+Use AJAX to populate the data table.
+Constant stream of new incoming data
+Consider user wants to look at logs, but logs are constantly streaming in and the ones they care about get buried as they are looking at it. Time stamp when user first hits the page so that incoming logs don’t swamp out the ones they care about.
+
+Ssssssttttttrrrrrreeeettttcccchhhhhhh 
+User can add endpoints (e.g. given connection string and any other necessary credentials, add a Log table to endpoints and have that information show up, and be filterable.)
+There are more than just the one user, each user would have their own ‘dashboard’ complete with their own custom endpoints from which they’re compiling all of their data.
+

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<LogViewer.Models.Log4NetLog>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+@foreach(var m in Model) {
+    <p>@m.Message</p>   
+}
+</div>
+
