@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LogViewer.Models.Log4NetLog>
+@{
+    ViewBag.Title = "Index";
+}
+<table>
+    <tr>
+        <th> @Html.LabelFor(x => x.FirstOrDefault().Date) </th>
+        <th> @Html.LabelFor(x => x.FirstOrDefault().Message) </th>
+        <th> @Html.LabelFor(x => x.FirstOrDefault().Exception) </th>
+    </tr>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.Date</td>
+            <td>@m.Message</td>
+            <td>@m.Exception</td>
+        </tr>
+    }  
+</table>
