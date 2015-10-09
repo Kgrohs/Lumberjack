@@ -15,7 +15,10 @@ What I actually got accomplished:
 
 Getting the environment setup for development and server to deploy to and database setup has taken most of this "Sprint". 
 I have a server set up at work, I'm using Hyper-V to manage a VM that uses Windows Server 2012 R2. I had to Set up IIS Webserver role and SQL Server 2012. 
-From Visual studio, I'm able to publish my web application to the Server to be hosted. 
+From Visual studio, I'm running into firewall issues and user permission issues with trying to publish my web application from Visual Studio to the Server I set up
 
 I have the Database created, but am still working towards being able to point my application at it and pull data from it. I'm hoping that once I get all of this plumbing done
 the development process will speed up significantly. This sprint has given me a much larger appreciation for the environment setup that was given to us last semester..
+I can see how taking shortcuts when setting things up can create a lot of technical debt down the road.
+
+I'll likely be continually working at this until you end up grading it.
