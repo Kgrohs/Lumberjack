@@ -1,12 +1,9 @@
-﻿using log4net;
-using LogViewer.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using AlertSense.Lumberjack.Contracts.Entities;
+using log4net;
 
-namespace Lumberjack.LogViewer.Controllers
+namespace LogViewer.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,11 +12,10 @@ namespace Lumberjack.LogViewer.Controllers
             ILog log = LogManager.GetLogger(typeof(HomeController));
             log.Debug("LoadingHomeController.");
 
-            //TODO: Get logs from DB
-            IEnumerable<Log4NetLog> logs = new List<Log4NetLog> {
-                new Log4NetLog{Message = "Message1"},
-                new Log4NetLog{Message = "Message2"},
-                new Log4NetLog{Message = "Message3"},
+            IEnumerable<AdoNetLog> logs = new List<AdoNetLog> {
+                new AdoNetLog{Message = "Broke the build", Exception = "Bad Things Happened.."},
+                new AdoNetLog{Message = "No controller for /images/cat.png", Exception = "Bad Things Happened.."},
+                new AdoNetLog{Message = "Fixed the build!"},
             };
             return View(logs);
         }

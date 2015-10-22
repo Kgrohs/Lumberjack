@@ -1,19 +1,27 @@
-﻿@model IEnumerable<LogViewer.Models.Log4NetLog>
+﻿@using ServiceStack
+@model IEnumerable<AlertSense.Lumberjack.Contracts.Entities.AdoNetLog>
 @{
     ViewBag.Title = "Index";
 }
+<link href="@Url.Content("~/Content/LogViewer.css")" rel="stylesheet" type="text/css" />
 <table>
     <tr>
         <th> @Html.LabelFor(x => x.FirstOrDefault().Date) </th>
         <th> @Html.LabelFor(x => x.FirstOrDefault().Message) </th>
-        <th> @Html.LabelFor(x => x.FirstOrDefault().Exception) </th>
     </tr>
     @foreach (var m in Model)
     {
         <tr>
             <td>@m.Date</td>
-            <td>@m.Message</td>
-            <td>@m.Exception</td>
+            <td>
+                <pre>@m.Message</pre>
+            @if (!m.Exception.IsNullOrEmpty())
+            {
+                <div>Exception:
+                    <pre>@m.Exception</pre>
+                </div>
+            }
+            </td>
         </tr>
     }  
 </table>

@@ -1,11 +1,19 @@
-﻿@model IEnumerable<LogViewer.Models.Log4NetLog>
+﻿@using ServiceStack
+@model IEnumerable<AlertSense.Lumberjack.Contracts.Entities.AdoNetLog>
 @{
     ViewBag.Title = "Home Page";
 }
 
 <div>
 @foreach(var m in Model) {
-    <p>@m.Message</p>   
+    <div>
+        <p>Message: @m.Message  </p>
+    @if(!m.Exception.IsNullOrEmpty()) {
+        <p>Exception: @m.Exception</p>
+    }
+       
+    </div>
+    
 }
 </div>
 

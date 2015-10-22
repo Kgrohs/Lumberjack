@@ -3,28 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AlertSense.Lumberjack.Contracts.Entities;
+using AlertSense.Lumberjack.Contracts.Managers;
+using AlertSense.Lumberjack.Services.LogService;
 using log4net;
 using LogViewer.Models;
-using Lumberjack.LogViewer.Controllers;
 
 namespace LogViewer.Controllers
 {
     public class LogViewerController : Controller
     {
-        //
-        // GET: /LogViewer/
+        private ILogViewerManager _logViewerManager;
+        public ILogViewerManager LogViewerManager
+        {
+            get
+            {
+                return _logViewerManager ?? (_logViewerManager = LogViewerManagerFactory.CreateManager());
+            }
+            set { _logViewerManager = value; }
+        }
 
         public ActionResult Index()
         {
-            ILog log = LogManager.GetLogger(typeof(HomeController));
-            log.Debug("LoadingHomeController.");
+            ILog log = LogManager.GetLogger(typeof(LogViewerController));
+            log.Debug("Loading LogViewer Controller.");
 
-            
-            IEnumerable<Log4NetLog> logs = new List<Log4NetLog> {
-                new Log4NetLog{Message = "Message1"},
-                new Log4NetLog{Message = "Message2"},
-                new Log4NetLog{Message = "Message3"},
-            };
+            var logs = LogViewerManager.GetAllLogs();
             return View(logs);
         }
 

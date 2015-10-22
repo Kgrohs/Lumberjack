@@ -5,11 +5,28 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertSense.Lumberjack.LogViewer", "LogViewer\AlertSense.Lumberjack.LogViewer.csproj", "{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AlertSense.Lumberjack.Data", "Log\AlertSense.Lumberjack.Data.sqlproj", "{5FB38432-B6E8-4894-B4CC-B9D589180221}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AlertSense.Lumberjack.Database", "Log\AlertSense.Lumberjack.Database.sqlproj", "{5FB38432-B6E8-4894-B4CC-B9D589180221}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{0602BB8D-5BE7-4824-8E09-E7B36F2397A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5493053F-E1FC-4EAF-8DF4-318FAC8358AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alertsense.Lumberjack.Data", "Alertsense.Lumberjack.Data\Alertsense.Lumberjack.Data.csproj", "{922B4FAC-A064-4D44-BBC1-D14E024E7852}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AD865960-336D-4BE0-BB27-247F6CCD4FF9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{F6FEE2DA-3CB2-499B-A28E-D3AA151B271A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertSense.Lumberjack.Contracts", "AlertSense.Lumberjack.Contracts\AlertSense.Lumberjack.Contracts.csproj", "{8366BCC3-24F8-4802-839F-3D587F599A9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6CF91CB2-153E-4749-8E73-4670AC9CD0AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertSense.Lumberjack.Services.LogService", "AlertSense.Lumberjack.Services.LogService\AlertSense.Lumberjack.Services.LogService.csproj", "{EAEEE253-2F5C-412B-9DD7-67B2BB18842A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +44,18 @@ Global
 		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5FB38432-B6E8-4894-B4CC-B9D589180221}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{922B4FAC-A064-4D44-BBC1-D14E024E7852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922B4FAC-A064-4D44-BBC1-D14E024E7852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922B4FAC-A064-4D44-BBC1-D14E024E7852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922B4FAC-A064-4D44-BBC1-D14E024E7852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8366BCC3-24F8-4802-839F-3D587F599A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8366BCC3-24F8-4802-839F-3D587F599A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8366BCC3-24F8-4802-839F-3D587F599A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8366BCC3-24F8-4802-839F-3D587F599A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAEEE253-2F5C-412B-9DD7-67B2BB18842A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEEE253-2F5C-412B-9DD7-67B2BB18842A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEEE253-2F5C-412B-9DD7-67B2BB18842A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEEE253-2F5C-412B-9DD7-67B2BB18842A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +63,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4F45FEB2-D0BF-4CF7-941D-A8853B89D3B2} = {0602BB8D-5BE7-4824-8E09-E7B36F2397A5}
 		{5FB38432-B6E8-4894-B4CC-B9D589180221} = {5493053F-E1FC-4EAF-8DF4-318FAC8358AA}
+		{922B4FAC-A064-4D44-BBC1-D14E024E7852} = {5493053F-E1FC-4EAF-8DF4-318FAC8358AA}
+		{8366BCC3-24F8-4802-839F-3D587F599A9B} = {F6FEE2DA-3CB2-499B-A28E-D3AA151B271A}
+		{EAEEE253-2F5C-412B-9DD7-67B2BB18842A} = {6CF91CB2-153E-4749-8E73-4670AC9CD0AA}
 	EndGlobalSection
 EndGlobal
