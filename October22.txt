@@ -1,0 +1,16 @@
+October 22
+Logs displayed should grab logs from multiple tables
+Table could be on different servers. 
+Add information as to where each log is coming from( instance/tablename?) and merge data on time stamp
+ Make sure that ticks are enabled for time, seconds probably won’t be precise enough.
+Add form to filter the logs presented. log4net logs have the 
+following fields that should be filterable: [Date],[Thread],[Level],[Logger],[Message],[Exception]
+
+Actually got done:
+
+This turned out to be much more work than I'd given credit.. still feel like I'm spending half of my time configuring SQL or Web servers..
+Found out that when you hit my site, at first you get a 500 because the connection takes too long.. like it's asleep or something, if you refresh the page you're golden.
+So that's a feature. Locally, I have a database with a Log table that I can insert into with ADOnet appender and query for results and throw them up on the page. After I deploy my site
+It looks like the ADOnet appender has no problem connecting to the database after deployment. I can log into the server and see that entries populate in the Log table. Seems odd that 
+the app can insert into the database, but not query it.. I'll continue to work on the app locally, but will eventually have to come back to the server administration stuff.
+
